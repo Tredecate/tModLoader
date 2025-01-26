@@ -376,7 +376,7 @@ case $cmd in
 		fi
 		
 		chmod +x start-tModLoaderServer.sh
-		./start-tModLoaderServer.sh -nosteam -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps" -tmlsavedirectory "$folder" "$start_args"
+		./start-tModLoaderServer.sh -nosteam -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" "$start_args"
 		;;
 	*)
 		echo "Invalid Command: $1"

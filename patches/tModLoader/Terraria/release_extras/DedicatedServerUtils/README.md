@@ -112,7 +112,7 @@ To explore all the options before continuing, run `./manage-tModLoaderServer.sh 
 ## Server Configuration
 If you want to run tModLoader without needing any input on startup (such as from an init system), copy the example [serverconfig.txt](https://github.com/tModLoader/tModLoader/tree/1.4.4/patches/tModLoader/Terraria/release_extras/serverconfig.txt) and change the settings how you like. Key options are defined below, and other options can be found [on the Terraria wiki](https://terraria.wiki.gg/wiki/Server#Server_config_file)
 * `worldname` changes the default world name when creating a new world using autocreate **You do not need to include .wld in your world name**. This setting **will not** work with an existing world, see the `world` option for an existing world
-* `world` sets the exact path to an existing or new terraria world, ex. `worldpath/to/your/world.wld`. **For Docker installations**, the world path must follow `/home/tml/.local/share/Terraria/tModLoader/Worlds/your_world.wld`
+* `world` sets the exact path to an existing or new terraria world, ex. `worldpath/to/your/world.wld`. **For Docker installations**, the world path must follow `/data/Worlds/your_world.wld`
 * `autocreate=1` will enable autocreating, which creates a new world at your provided location if one does not already exist
 
 ---
