@@ -266,6 +266,7 @@ Options:
  --keepbackups       When installing with --github, keep all previous versions instead of deleting them when updating
  --tmlversion        Version of tModLoader to install. Only works if --github is provided. Functionally equivalent to the TMLVERSION env variable
  --steamcmdpath      Path to steamcmd.sh for Steam tModLoader mod installation. Functionally equivalent to the STEAMCMDPATH env variable
+ --tml-version       DEPRECATED: Kept for compatibility, but the --tmlversion flag or the TMLVERSION environment variable should be used instead
 
 Commands:
  install-tml         Installs tModLoader from Steam (or Github if --github is provided)
