@@ -84,7 +84,7 @@ COPY --chown=tml:tml --chmod=0755 <<EOF ./.bin/entrypoint
 umask "${UMASK}"
 
 # Ensure directories exist before ownership changing
-#mkdir -p /data/Mods /data/Worlds
+#mkdir -p /tModLoader/Mods /tModLoader/Worlds
 
 pipe=/tmp/tmod.pipe
 
@@ -103,7 +103,7 @@ echo "Starting tModLoader server..."
 
 rm -f \$pipe
 mkfifo \$pipe
-tmux new-session -d -s tml "~/manage-tModLoaderServer.sh start --folder /data"
+tmux new-session -d -s tml "~/manage-tModLoaderServer.sh start --folder /tModLoader"
 tmux pipe-pane -o -t tml "cat >> \$pipe" &
 cat \$pipe &
 

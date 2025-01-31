@@ -4,6 +4,7 @@ services:
   tml:
     container_name: tml
     restart: unless-stopped
+    #platform: linux/amd64 # Enable if you are running Docker on an ARM machine
     build:
       context: .
       # args:
@@ -13,7 +14,7 @@ services:
     ports:
       - 7777:7777
     volumes:
-      - ./tModLoader:/data
+      - ./tModLoader:/tModLoader
       # Optional volumes below. These files/folders MUST exist on the host
       # before they can be mounted, otherwise they will appear as owned by root
       #- ./tModLoader/logs:/home/tml/server/tModLoader-Logs
