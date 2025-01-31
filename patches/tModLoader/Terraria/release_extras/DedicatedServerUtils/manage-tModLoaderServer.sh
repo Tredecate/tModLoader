@@ -63,8 +63,8 @@ function update_script {
 	pushd "$(dirname "$(realpath "$0")")"
 
 	echo "Updating from version v$script_version to v$latest_script_version"
-	mv manage-tModLoaderServer.sh manage-tModLoaderServer.sh.old
 	curl -s -O "$script_url" || exit 1
+	mv manage-tModLoaderServer.sh.1 manage-tModLoaderServer.sh
 
 	popd
 }
