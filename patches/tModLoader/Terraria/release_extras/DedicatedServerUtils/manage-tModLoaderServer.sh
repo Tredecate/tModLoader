@@ -315,8 +315,9 @@ while [[ $# -gt 0 ]]; do
 		--keepbackups)
 			keep_backups=true
 			;;
-		--tmlversion)
+		--tmlversion|--tml-version)
 			tml_version="$2"
+			github=true
 			shift
 			;;
 		--steamcmdpath)
