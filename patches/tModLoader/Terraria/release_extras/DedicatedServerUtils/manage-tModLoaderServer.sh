@@ -372,13 +372,15 @@ case $cmd in
 		fi
 
 		if is_in_docker; then
-			cd "$HOME/server" || exit
+			cd "$HOME/server/LaunchUtils" || exit
+   			chmod +x ScriptCaller.sh
+      			source ScriptCaller.sh -server -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" "$start_args"
+      			
 		else
 			cd "$folder/server" || exit
+			chmod +x start-tModLoaderServer.sh
+			./start-tModLoaderServer.sh -nosteam -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" "$start_args"
 		fi
-		
-		chmod +x start-tModLoaderServer.sh
-		./start-tModLoaderServer.sh -nosteam -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" "$start_args"
 		;;
 	*)
 		echo "Invalid Command: $1"
