@@ -372,9 +372,9 @@ case $cmd in
 		fi
 
 		if is_in_docker; then
-			cd "$HOME/server/LaunchUtils" || exit
-   			chmod +x ScriptCaller.sh
-      			source ScriptCaller.sh -server -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" "$start_args"
+			cd "$HOME/server" || exit
+   			chmod +x ./LaunchUtils/ScriptCaller.sh
+      			source ./LaunchUtils/ScriptCaller.sh -server -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" $start_args
       			
 		else
 			cd "$folder/server" || exit
