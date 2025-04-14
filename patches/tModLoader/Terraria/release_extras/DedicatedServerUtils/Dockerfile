@@ -124,4 +124,4 @@ RUN ISDOCKER=1 ./manage-tModLoaderServer.sh install-tml --github
 
 EXPOSE 7777
 
-ENTRYPOINT [ "~/manage-tModLoaderServer.sh", "start", "--folder", "/tModLoader" ]
+ENTRYPOINT [ "./manage-tModLoaderServer.sh", "start", "--folder", "/tModLoader" ]
