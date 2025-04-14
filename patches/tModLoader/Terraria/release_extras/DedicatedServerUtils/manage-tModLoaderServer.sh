@@ -374,7 +374,8 @@ case $cmd in
 		if is_in_docker; then
 			cd "$HOME/server" || exit
 			chmod +x ./LaunchUtils/ScriptCaller.sh
-      			source ./LaunchUtils/ScriptCaller.sh -server -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" $start_args
+      source ./LaunchUtils/ScriptCaller.sh -server -config "$folder/serverconfig.txt" -steamworkshopfolder "$folder/steamapps/workshop" -tmlsavedirectory "$folder" $start_args
+
 		else
 			cd "$folder/server" || exit
 			chmod +x start-tModLoaderServer.sh
