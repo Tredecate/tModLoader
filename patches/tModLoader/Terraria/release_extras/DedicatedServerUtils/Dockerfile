@@ -122,6 +122,8 @@ ADD --chown=tml:tml --chmod=0755 https://raw.githubusercontent.com/Tredecate/tMo
 # Adding write permissions for the logs is necessary because when Docker mounts a volume that doesn't exist on the host it mounts both host and container as root
 RUN ISDOCKER=1 ./manage-tModLoaderServer.sh install-tml --github
 
+RUN sed -i 's|cd "$(dirname "$0")"|cd "$(dirname "${BASH_SOURCE[0]}")"|' ./server/LaunchUtils/ScriptCaller.sh
+
 EXPOSE 7777
 
 ENTRYPOINT [ "./manage-tModLoaderServer.sh", "start", "--folder", "/tModLoader" ]
